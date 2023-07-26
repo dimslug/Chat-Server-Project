@@ -108,7 +108,7 @@ You will need to consider what data types should be associated with a key in eac
 | required / unique | required / unique | required | 
 
 
-`#U5_02a`
+`#U5_02a` - Dominic
 **Room**
 
 Rooms will need to be referenced in the front end for users to navigate to see various messages. Each room will be created by a user, making that user the "admin" who can only update and delete said room. 
@@ -122,7 +122,7 @@ The messages key will eventually hold an object of each message so that it can b
 | required / unique | not required | array | id |
 
 
-`#U5_02b`
+`#U5_02b` -Jimmy
 ## Message:
 
 Users should be able to create a messages that are associated with a room. 
@@ -152,7 +152,7 @@ These are the routes that will be required per schema created.
 - Create an account
 - Login to an account
 
-`#U5_04a` **Room**
+`#U5_04a` **Room** - Dominic
 
 - Create a room
 - Get one room
@@ -162,7 +162,7 @@ These are the routes that will be required per schema created.
 
 Rooms should only be updated and deleted by the owner. All users should be able to view each room. All users should be able to view a selection of all rooms.
 
-`#U5_04b` **Message**
+`#U5_04b` **Message** - Jimmy
 
 - Create a message per room
 - Get all messages per room
