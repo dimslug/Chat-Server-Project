@@ -1,14 +1,11 @@
-const router = require('express').Router();
-const Room = require('../models/messageRooms.models');
+const router = require("express").Router();
+const Room = require("../models/messageRooms.models");
 
-// error response function - to reduce written code
 const errorResponse = (res, error) => {
-    return (
-        res.status(500).json({
-            error: error.message
-        })
-    )
-}
+  return res.status(500).json({
+    error: error.message,
+  });
+};
 
 // TODO Post - Create new Room
 
@@ -19,7 +16,5 @@ const errorResponse = (res, error) => {
 // TODO Update a room
 
 // TODO Delete a Room
-
-
 
 modules.exports = router;
