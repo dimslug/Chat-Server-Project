@@ -1,11 +1,6 @@
-/*
- | title | description | messages | ownerId |
-| --- | --- | --- | ---|
-| required / unique | not required | array | id | */
-
 const mongoose = require('mongoose');
 
-const MessageRoomSchema = new mongoose.schema({
+const MessageRoomSchema = new mongoose.Schema({
     title: {
         type: String,
         required: true,
@@ -18,7 +13,7 @@ const MessageRoomSchema = new mongoose.schema({
         type: Array
     },
     ownerID: {
-        type: id
+        type: String
     }
 });
 
