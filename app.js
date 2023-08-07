@@ -5,19 +5,31 @@ const mongoose = require('mongoose');
 const app = express();
 const log = console.log;
 const PORT = process.env.PORT;
-const MONGO = process.env.MONGO || process.env.MONGODB
+
+//! Imports
+const { db } = require('./db');
+const users = require('./controllers/users.controller');
+const roomController = require('./controllers/messageRoom.controller')
+
 
 //! Middleware
-mongoose.connect(`${MONGO}chatserver`)
-const db = mongoose.connection;
-db.once("open", () => log(`Connected: ${MONGO}`));
-
-
 app.use(express.json());
 
 //! Routes
+app.use('/users', users);
+app.use('/room', roomController);
+//app.use('/message', messageController);
+
+//! Connetion
+const server = async() => {
+    db();
+
+    app.listen(PORT, () => log(`Chat server is running on port : ${PORT}`));
+
+}
+
+server();
 
 
 
-app.listen(PORT, () => log(`Chat server is running on port : ${PORT}`));
 
