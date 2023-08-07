@@ -19,7 +19,13 @@ app.use(express.json());
 app.use('/users', users);
 app.use('/room', roomController);
 //app.use('/message', messageController);
+app.listen(PORT, () => log(`Chat server is running on port : ${PORT}`));
 
+const express = require('express');
+const router = express.Router();
+const { loginUser } = require('../controllers/userController');
+
+router.post('/login', loginUser);
 //! Connetion
 const server = async() => {
     db();
